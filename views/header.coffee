@@ -1,15 +1,15 @@
-div class: "topbar", ->
-  div class: "fill", ->
-    div class: "container", ->
+div ".topbar", ->
+  div ".fill", ->
+    div ".container", ->
 
-      a href: "/", class: "brand", -> "site"
+      a ".brand", href: "/", -> "site"
 
-      ul class: "secondary-nav", ->
+      ul ".secondary-nav", ->
         li ->
           a href: "/about/", -> "About"
         li class: "menu dropdown", ->
           li class: "menu dropdown", "data-dropdown": "dropdown", ->
-            a href: "#", class: "menu", -> "Dropdown"
+            a ".menu", href: "#", -> "Dropdown"
             ul class: "menu-dropdown span5", ->
               li ->
                 a href: "#", -> "Lorem"
