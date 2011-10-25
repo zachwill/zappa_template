@@ -1,6 +1,6 @@
 doctype 5
 
-comment "paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/"
+# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ie "if lt IE 7", ->
   html class: "no-js ie6", lang: "en"
 ie "if IE 7", ->
@@ -8,7 +8,7 @@ ie "if IE 7", ->
 ie "if IE 8", ->
   html class: "no-js ie8", lang: "en"
 ie "if gt IE 8", ->
-  html class: "no-js", lang: "en"
+  text """<!--> <html class="no-js" lang="en"> <!--"""
 
 head ->
   meta charset: "utf-8"
@@ -51,7 +51,7 @@ body ->
 
   # JavaScript at the bottom for fast page loading.
 
-  # Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
+  # Grab Google CDN's jQuery, with a protocol relative URL.
   script src: "//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"
   coffeescript ->
     window.jQuery or document.write('<script src="/js/libs/jquery-1.6.4.min.js">\x3C/script>')
@@ -61,7 +61,8 @@ body ->
 
   @js
 
-  # mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID
+  # mathiasbynens.be/notes/async-analytics-snippet
+  # Change UA-XXXXX-X to be your site's Google Analytics ID.
   script type: "text/javascript", -> """
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
@@ -72,4 +73,5 @@ body ->
   # Prompt IE 6-7 users to install Chrome Frame.
   ie "if lte IE 7", ->
     script src: "//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"
-    script -> "window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})"
+    coffeescript ->
+      window.attachEvent('onload', -> CFInstall.check(mode: 'overlay'))
