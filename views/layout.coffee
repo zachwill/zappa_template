@@ -1,9 +1,9 @@
 doctype 5
 
 comment "paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/"
-ie  "if lt IE 7", ->
+ie "if lt IE 7", ->
   html class: "no-js ie6", lang: "en"
-ie  "if IE 7", ->
+ie "if IE 7", ->
   html class: "no-js ie7", lang: "en"
 ie "if IE 8", ->
   html class: "no-js ie8", lang: "en"
@@ -13,7 +13,7 @@ ie "if gt IE 8", ->
 head ->
   meta charset: "utf-8"
 
-  title @title or 'yoursite.com'
+  title @title or "yoursite.com"
 
   meta name: "description", content: ""
   meta name: "author", content: ""
