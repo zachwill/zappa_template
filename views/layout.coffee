@@ -26,8 +26,6 @@ head ->
   link rel: "stylesheet", href: "/css/bootstrap.min.css"
   link rel: "stylesheet/less", href: "/css/main.less"
 
-  @css
-
   # Use less.js to compile 'stylesheet/less' files.
   script src: "//cdnjs.cloudflare.com/ajax/libs/less.js/1.1.3/less-1.1.3.min.js"
   coffeescript ->
@@ -58,8 +56,6 @@ body ->
 
   # Additional JavaScript libraries and plugins...
   script src: "/js/libs/bootstrap-dropdown.js"
-
-  @js
 
   # mathiasbynens.be/notes/async-analytics-snippet
   # Change UA-XXXXX-X to be your site's Google Analytics ID.
