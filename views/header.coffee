@@ -17,4 +17,4 @@ div ".topbar", ->
               li ->
                 a href: "#", -> "Ipsum"
         li ->
-          a href: "http://github.com/zachwill/sinatra_template", -> "Github"
+          a href: "http://github.com/zachwill/zappa_template", -> "Github"
