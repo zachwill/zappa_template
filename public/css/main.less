@@ -1,0 +1,22 @@
+@import "bootstrap/mixins.less";
+
+@green: #8fc829;
+@pink: #be1a8d;
+
+.custom-highlight{
+    background: @pink;
+    color: #fff;
+    text-shadow: -1px 1px 1px darken(@pink, 15%);
+}
+
+/* Apply custom highlight */
+::-moz-selection{ .custom-highlight; }
+::selection { .custom-highlight; }
+
+body{
+    padding-top: 80px;
+}
+
+.tagline{
+    margin-top: 15px;
+}

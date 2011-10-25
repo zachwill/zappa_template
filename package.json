@@ -1,0 +1,8 @@
+{
+  "name": "zappa_template",
+  "version": "1.0.0",
+  "dependencies": {
+    "zappa": ">= 0.3",
+    "coffee-script": ">= 1.1.2",
+  }
+}
