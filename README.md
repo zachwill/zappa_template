@@ -39,4 +39,4 @@ You should then be able to see the live application.
     heroku open
 
 To see this template in action, visit:
-[zappa.herokuapp.com](http://zappa.herokuapp.com)
+[zappajs.herokuapp.com](http://zappajs.herokuapp.com)
