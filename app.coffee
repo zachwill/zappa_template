@@ -8,3 +8,6 @@ require('zappa') PORT, ->
 
   @get '/about/': ->
     @render 'about'
+
+  @get '/json': ->
+    @send foo: "bar"
