@@ -1,13 +1,13 @@
 doctype 5
 
 # paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-ie "if lt IE 7", ->
+ie "lt IE 7", ->
   html class: "no-js ie6", lang: "en"
-ie "if IE 7", ->
+ie "IE 7", ->
   html class: "no-js ie7", lang: "en"
-ie "if IE 8", ->
+ie "IE 8", ->
   html class: "no-js ie8", lang: "en"
-ie "if gt IE 8", ->
+ie "gt IE 8", ->
   text """<!--> <html class="no-js" lang="en"> <!--"""
 
 head ->
@@ -20,7 +20,7 @@ head ->
   meta name: "viewport", content: "width=980"
 
   # HTML5 shim, for IE 6-8 support of HTML elements
-  ie "if lt IE 9", ->
+  ie "lt IE 9", ->
     script src: "http://html5shim.googlecode.com/svn/trunk/html5.js"
 
   link rel: "stylesheet", href: "/css/bootstrap.min.css"
@@ -67,7 +67,7 @@ body ->
   """
 
   # Prompt IE 6-7 users to install Chrome Frame.
-  ie "if lte IE 7", ->
+  ie "lte IE 7", ->
     script src: "//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"
     coffeescript ->
       window.attachEvent('onload', -> CFInstall.check(mode: 'overlay'))
