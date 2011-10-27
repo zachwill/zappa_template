@@ -20,6 +20,10 @@ You should then be able to run the `app.coffee` script.
 
     coffee app.coffee
 
+You can also pass it an optional port parameter.
+
+    coffee app.coffee 5555
+
 
 Heroku
 ------
