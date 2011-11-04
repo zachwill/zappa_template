@@ -12,6 +12,7 @@ ie "gt IE 8", ->
 
 head ->
   meta charset: "utf-8"
+  meta "http-equiv": "X-UA-Compatible", content: "IE=Edge;chrome=1"
 
   title @title or "yoursite.com"
 
@@ -43,7 +44,8 @@ body ->
   header ->
     partial "header"
 
-  div "#main", role: "main", @body
+  div "#main", role: "main", ->
+    @body
 
   footer @footer
 
