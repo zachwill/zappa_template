@@ -2,5 +2,4 @@
 .custom-highlight{background:#be1a8d;color:#fff;text-shadow:-1px 1px 1px #7b115b;}
 ::-moz-selection{background:#be1a8d;color:#fff;text-shadow:-1px 1px 1px #7b115b;}
 ::selection{background:#be1a8d;color:#fff;text-shadow:-1px 1px 1px #7b115b;}
-body{padding-top:80px;}
-.tagline{margin-top:15px;}
+textarea{resize:vertical;}
