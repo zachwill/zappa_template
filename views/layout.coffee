@@ -24,6 +24,7 @@ head ->
   ie "lt IE 9", ->
     script src: "http://html5shim.googlecode.com/svn/trunk/html5.js"
 
+  link rel: "shortcut icon", href: "/favicon.ico"
   link rel: "stylesheet", href: "/css/bootstrap.min.css"
   link rel: "stylesheet/less", href: "/css/main.less"
 
@@ -31,11 +32,6 @@ head ->
   script src: "//cdnjs.cloudflare.com/ajax/libs/less.js/1.1.3/less-1.1.3.min.js"
   coffeescript ->
     window.less or document.write('<script src="/js/libs/less-1.1.3.min.js">\x3C/script>')
-
-  link rel: "shortcut icon", href: "/favicon.ico"
-  link rel: "apple-touch-icon", href: "/apple-touch-icon.png"
-  link rel: "apple-touch-icon", sizes: "72x72", href: "/apple-touch-icon-72x72.png"
-  link rel: "apple-touch-icon", sizes: "114x114", href: "/apple-touch-icon-114x114.png"
 
   # Need Modernizr? Uncomment the following script.
   # script src:"/js/libs/modernizr-2.0.6.js"
@@ -47,14 +43,15 @@ body ->
   div "#main", role: "main", ->
     @body
 
-  footer @footer
+  footer ->
+    partial "footer"
 
   # JavaScript at the bottom for fast page loading.
 
   # Grab Google CDN's jQuery, with a protocol relative URL.
-  script src: "//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"
+  script src: "//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"
   coffeescript ->
-    window.jQuery or document.write('<script src="/js/libs/jquery-1.6.4.min.js">\x3C/script>')
+    window.jQuery or document.write('<script src="/js/libs/jquery-1.7.0.min.js">\x3C/script>')
 
   # Additional JavaScript libraries and plugins...
   script src: "/js/libs/bootstrap-dropdown.js"
