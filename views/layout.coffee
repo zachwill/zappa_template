@@ -49,9 +49,9 @@ body ->
   # JavaScript at the bottom for fast page loading.
 
   # Grab Google CDN's jQuery, with a protocol relative URL.
-  script src: "//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"
+  script src: "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
   coffeescript ->
-    window.jQuery or document.write('<script src="/js/libs/jquery-1.7.0.min.js">\x3C/script>')
+    window.jQuery or document.write('<script src="/js/libs/jquery-1.7.1.min.js">\x3C/script>')
 
   # Additional JavaScript libraries and plugins...
   script src: "/js/libs/bootstrap-dropdown.js"
