@@ -11,7 +11,8 @@ You can also start the application with an optional port number.
 PORT = process.argv[2] or 3000
 
 require('zappa') PORT, ->
-  @use 'static'
+  # Cache static content for 10 minutes.
+  @use @express.static "#{@root}/public", maxAge: 600000
 
   @get '/': ->
     @render 'home'
